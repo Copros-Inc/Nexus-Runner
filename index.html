@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>AI-Nexus Runner</title>
+    <style>body,html,iframe{margin:0;padding:0;width:100%;height:100%;overflow:hidden;border:none;}</style>
+</head>
+<body>
+    <iframe id="f" src=""></iframe>
+    <script>
+        const p = new URLSearchParams(window.location.search);
+        const target = p.get('app');
+        if (target) {
+            document.getElementById('f').src = target;
+        } else {
+            document.body.innerHTML = "<h3>AI-Nexus Runner</h3>URLの末尾に ?app=SharePointのパス を付けてください。";
+        }
+    </script>
+</body>
+</html>
